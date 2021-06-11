@@ -153,7 +153,6 @@ section {
 }
 
 .profile-links {
-  z-index: 10;
   width: 100%;
   height: 100%;
   color: #fff;
@@ -206,7 +205,8 @@ section {
 .project-img:hover {
   will-change: transform;
   transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
-  transition: transform .5s cubic-bezier(.155,1.105,.295,1.12),box-shadow .5s;
+  transition: transform 0.5s cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    box-shadow 0.5s;
 }
 .project-name {
   margin-bottom: 1rem;
@@ -217,4 +217,41 @@ section {
   color: var(--text);
   line-height: 1.5;
   margin-bottom: 1.8rem;
+}
+
+/* footer--------------------------------------------------- */
+
+.wrapper {
+  background-color: #d2dbad;
+}
+
+.clip-div {
+  height: 40vh;
+  width: 100%;
+  background-image: var(--grad);
+  /* margin-top: -2rem; */
+  clip-path: polygon(0 70%, 100% 20%, 100% 100%, 0 100%);
+}
+
+.footer {
+  height: 20vh;
+  width: 100%;
+  background-color: #292e46;
+  text-align: center;
+}
+.top {
+  height: 5vh;
+  display: inline-block;
+  margin: 1rem 0 2rem 0;
+}
+
+.top a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+
+.top:hover {
+  transform: scale(1.2, 1.2);
 }
