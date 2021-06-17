@@ -11,10 +11,15 @@
   --heading: 2.2em;
   --grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
-
-html {
+html{
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+}
+
+body{
+
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -30,12 +35,14 @@ body::-webkit-scrollbar-thumb {
   border-radius: 1em;
 }
 
+
+
+
 section {
   height: 100vh;
   width: 100%;
   scroll-snap-align: start;
-
-  /* transition: scroll-snap-align 0.25s ease-in; */
+  transition: scroll-snap-align 0.25s ease-in;
 }
 
 .jumbotron {
@@ -113,13 +120,15 @@ section {
 /* about--------------------------------- */
 
 .about {
+
   display: flex;
+  padding: 2.5em 0;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-image: var(--grad);
   /* text-align: center; */
-  padding: 2em 1em;
+  /* padding: 2em 1em; */
 }
 
 .about h1 {
@@ -133,14 +142,14 @@ section {
 }
 
 .profile-pic {
-  width: 20vw;
+  width: 18vw;
   border-radius: 50%;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .profile-desc {
   width: 70%;
-  margin: 0 auto;
+  margin: -1em auto;
   color: #fff;
   font-size: 1.5em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -181,6 +190,7 @@ section {
 }
 
 .project-heading {
+
   font-size: 3em;
   padding: 2em 0em 1em 0em;
 }
@@ -326,6 +336,8 @@ section {
   }
 
   .projects h1 {
+    width: 80%;
+    margin: 0 auto;
     font-size: 1.8em;
     padding: 1em 0 0 0;
   }
